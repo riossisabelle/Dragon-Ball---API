@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# 🐉 Dragon Ball Characters - React + API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto em **React** que consome a [API pública do Dragon Ball](https://dragonball-api.com/api/characters) para exibir uma galeria com personagens e suas informações.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Índice
 
-### `npm start`
+1. [🚀 Introdução](#-introdução)  
+2. [🔗 API Utilizada](#-api-utilizada)  
+3. [📁 Estrutura do Projeto](#-estrutura-do-projeto)  
+4. [⚙️ Detalhamento dos Arquivos](#-detalhamento-dos-arquivos)  
+5. [📦 Instalação](#-instalação)  
+6. [📋 Considerações Finais](#-considerações-finais)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Introdução
 
-### `npm test`
+Esta aplicação React foi desenvolvida para consumir uma API pública e exibir informações detalhadas de personagens do universo Dragon Ball. Ela está dividida em três partes principais:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Serviços (API)**  
+- **Componentes (UI)**  
+- **Estilos (JS inline)**
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔗 API Utilizada
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A API utilizada é:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> 🌐 https://dragonball-api.com/api/characters
 
-### `npm run eject`
+Ela retorna informações como:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Nome
+- Imagem
+- Raça
+- Ki (nível de energia)
+- Afiliação
+- Entre outros atributos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Estrutura do Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+src/
+├── components/         # Componentes React (ex: DragonBallCharacters.js)
+├── services/           # Configuração do Axios para requisições
+├── styles/             # Estilos em JavaScript (inline)
+├── App.js              # Componente principal da aplicação
+└── index.js            # Ponto de entrada da aplicação
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ --Detalhamento dos Arquivos--
+services/api.js
+Arquivo onde o Axios é configurado com a base da URL da API. Isso permite chamadas simplificadas, como api.get('/characters').
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+components/DragonBallCharacters.js
+Este componente:
 
-### Code Splitting
+Utiliza useEffect para buscar dados ao montar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Usa useState para controlar estado dos personagens, carregamento e erros.
 
-### Analyzing the Bundle Size
+Renderiza os cards com nome, imagem, raça, ki e afiliação.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Aplica estilos visuais agradáveis nos cards usando objetos JS inline.
 
-### Making a Progressive Web App
+styles/DragonBallCharacters.js
+Define os estilos para:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Container principal
 
-### Advanced Configuration
+Cards dos personagens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Imagens e descrições
 
-### Deployment
+Os estilos são exportados como objetos JavaScript.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+App.js
+Componente principal da aplicação. É responsável por renderizar o título e o componente de personagens.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+index.js
+Ponto de entrada da aplicação React. Ele renderiza o <App /> dentro do elemento #root no HTML.
