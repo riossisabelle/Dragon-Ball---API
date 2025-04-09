@@ -1,4 +1,4 @@
-# 🐉 Dragon Ball Characters - React + API
+#  Dragon Ball Characters - React + API
 
 Este é um projeto em **React** que consome a [API pública do Dragon Ball](https://dragonball-api.com/api/characters) para exibir uma galeria com personagens e suas informações.
 
@@ -6,12 +6,12 @@ Este é um projeto em **React** que consome a [API pública do Dragon Ball](http
 
 ## 📌 Índice
 
-1. [🚀 Introdução](#-introdução)  
-2. [🔗 API Utilizada](#-api-utilizada)  
-3. [📁 Estrutura do Projeto](#-estrutura-do-projeto)  
-4. [⚙️ Detalhamento dos Arquivos](#-detalhamento-dos-arquivos)  
-5. [📦 Instalação](#-instalação)  
-6. [📋 Considerações Finais](#-considerações-finais)
+1. [ Introdução](#-introdução)  
+2. [ API Utilizada](#-api-utilizada)  
+3. [ Estrutura do Projeto](#-estrutura-do-projeto)  
+4. [ Detalhamento dos Arquivos](#-detalhamento-dos-arquivos)  
+5. [ Instalação](#-instalação)  
+6. [ Considerações Finais](#-considerações-finais)
 
 ---
 
