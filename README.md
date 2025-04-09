@@ -53,34 +53,5 @@ src/
 └── index.js            # Ponto de entrada da aplicação
 
 
- --Detalhamento dos Arquivos--
-services/api.js
-Arquivo onde o Axios é configurado com a base da URL da API. Isso permite chamadas simplificadas, como api.get('/characters').
 
-components/DragonBallCharacters.js
-Este componente:
 
-Utiliza useEffect para buscar dados ao montar.
-
-Usa useState para controlar estado dos personagens, carregamento e erros.
-
-Renderiza os cards com nome, imagem, raça, ki e afiliação.
-
-Aplica estilos visuais agradáveis nos cards usando objetos JS inline.
-
-styles/DragonBallCharacters.js
-Define os estilos para:
-
-Container principal
-
-Cards dos personagens
-
-Imagens e descrições
-
-Os estilos são exportados como objetos JavaScript.
-
-App.js
-Componente principal da aplicação. É responsável por renderizar o título e o componente de personagens.
-
-index.js
-Ponto de entrada da aplicação React. Ele renderiza o <App /> dentro do elemento #root no HTML.
